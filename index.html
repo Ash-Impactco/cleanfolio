@@ -7,6 +7,19 @@
 <link rel="icon" href="assets/Profile/Profile%20Pic.jpg" type="image/jpeg">
 <!-- Tailwind CSS -->
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  // No additional JS is required if you use the inline onclick in the HTML above.
+// However, if you want to centralize the toggle logic for accessibility, you can use the following:
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.tailwind-accordion-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const content = btn.nextElementSibling;
+      const arrow = btn.querySelector('svg');
+      if (content) content.classList.toggle('hidden');
+      if (arrow) arrow.classList.toggle('rotate-180');
+    });
+  });
+});
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <!-- Font Awesome -->
