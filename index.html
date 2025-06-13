@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aswin Raj - Portfolio</title>
+    <link rel="icon" href="assets/Profile/Profile%20Pic.jpg" type="image/jpeg">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .section { padding: 4rem 0; }
+        .section-header { text-align: center; margin-bottom: 3rem; }
+        .section-header h2 { font-size: 2.5rem; font-weight: bold; color: #2d3748; }
+        .nav-link { color: #4a5568; transition: color 0.3s; }
+        .nav-link:hover, .nav-link.active { color: #2b6cb0; }
+        .hero { position: relative; height: 100vh; display: flex; align-items: center; justify-content: center; color: white; }
+        .hero-image { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
+        .hero-content { position: relative; z-index: 1; }
+        .card { background: white; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);}
+        img { display: block; max-width: 100%; height: auto;}
+        .rounded-lg { border-radius: 0.5rem;}
+        .shadow-md { box-shadow: 0 4px 6px rgba(0,0,0,0.1);}
+        .w-full { width: 100%;}
+        .h-auto { height: auto;}
+    </style>
+</head>
+<body class="bg-gray-50 font-inter">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50" aria-label="Main navigation">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#home" class="text-2xl font-bold text-blue-600">Aswin Raj</a>
+                <!-- Desktop menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#experience" class="nav-link">Experience</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#ventures" class="nav-link">Ventures</a>
+                    <a href="#education" class="nav-link">Education</a>
+                    <a href="#certifications" class="nav-link">Certifications</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                <!-- Mobile menu button -->
+                <button class="md:hidden" id="mobile-menu-button" aria-label="Open menu">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <div class="md:hidden fixed w-full bg-white shadow-md z-40 transform -translate-y-full transition-transform duration-300" id="mobile-menu">
+            <div class="container mx-auto px-4 py-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#experience" class="nav-link">Experience</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#ventures" class="nav-link">Ventures</a>
+                    <a href="#education" class="nav-link">Education</a>
+                    <a href="#certifications" class="nav-link">Certifications</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main id="home">
+
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <picture>
+                <source srcset="assets/Profile/vestaearth_cover-small.webp" media="(max-width: 768px)">
+                <source srcset="assets/Profile/vestaearth_cover-medium.webp" media="(max-width: 1200px)">
+                <img src="assets/Profile/vestaearth_cover-large.webp" alt="Background landscape" class="hero-image" loading="lazy">
+            </picture>
+            <div class="container mx-auto px-4 text-center hero-content">
+                <div class="max-w-3xl mx-auto">
+                    <img src="assets/Profile/Profile Pic.jpg" alt="Portrait of Aswin Raj" class="rounded-full w-32 h-32 mb-4 mx-auto shadow-md">
+                    <h1 class="text-5xl md:text-6xl font-bold mb-4">Aswin Raj Sivaprakash</h1>
+                    <h2 class="text-2xl md:text-3xl mb-8">Business Executive / Customer Support</h2>
+                    <div class="flex flex-wrap justify-center space-x-4">
+                        <a href="#contact" class="bg-white text-blue-600 px-8 py-3 rounded-full hover:bg-gray-100 transition-colors mb-2">Contact Me</a>
+                        <a href="mailto:aswinr63@gmail.com" class="border-2 border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-blue-600 transition-colors mb-2">Email Me</a>
+                        <a href="assets/Resume/Aswin Resume.pdf" download class="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-colors flex items-center mb-2">
+                            <i class="fas fa-download mr-2"></i> Download CV
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Insert your expanded About, Education, Skills, Certifications, Experience, Projects, Ventures, and Contact sections here, following the expanded format you provided. -->
+
+    </main>
+
+    <footer class="text-center py-6 bg-gray-100 mt-8">
+        <div class="container mx-auto text-gray-600 text-sm">
+            &copy; 2025 Aswin Raj. Built with ❤️ using Tailwind CSS.
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('-translate-y-full');
+        });
+        // Close mobile menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('-translate-y-full');
+            });
+        });
+        // Smooth scroll and active nav highlighting
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+        // Highlight nav on scroll
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = Array.from(document.querySelectorAll('section[id]'));
+        window.addEventListener('scroll', () => {
+            const scrollPos = window.scrollY + 72; // nav height
+            let currentSection = sections[0];
+            for (const section of sections) {
+                if (section.offsetTop <= scrollPos) currentSection = section;
+            }
+            navLinks.forEach(link => link.classList.remove('active'));
+            const activeLink = Array.from(navLinks).find(link => link.getAttribute('href') === `#${currentSection.id}`);
+            if (activeLink) activeLink.classList.add('active');
+        });
+    </script>
+</body>
+</html>
