@@ -1,465 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Ash-Impactco | Portfolio</title>
-  <!-- Google Fonts: Montserrat -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Font Awesome for Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <!-- Smooth Scroll CSS -->
-  <link rel="stylesheet" href="css/smooth-scroll.css">
-  <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background: #f8fafc;
-      color: #22223b;
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .section {
-      padding: 3rem 0;
-    }
-    .section-header {
-      margin-bottom: 2rem;
-    }
-    .section-header h2 {
-      font-size: 2rem;
-      font-weight: 700;
-      text-align: center;
-      color: #22223b;
-      letter-spacing: 1px;
-    }
-    .btn-primary {
-      background: #2563eb;
-      color: #fff;
-      padding: 0.75rem 2rem;
-      border-radius: 9999px;
-      border: none;
-      font-size: 1.1rem;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background .2s, color .2s;
-      cursor: pointer;
-      display: inline-block;
-      margin-top: 1rem;
-    }
-    .btn-primary:hover {
-      background: #1d4ed8;
-      color: #e0e7ff;
-    }
-    /* Hero section */
-    #hero {
-      background: linear-gradient(90deg,#e0e7ff 0,#f1f5f9 100%);
-      text-align: center;
-      padding: 5rem 1rem 3rem 1rem;
-    }
-    #hero h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      letter-spacing: 2px;
-    }
-    #hero p {
-      color: #475569;
-      font-size: 1.3rem;
-      max-width: 700px;
-      margin: 0 auto 2rem auto;
-      line-height: 1.5;
-    }
-    .socials {
-      margin: 1.5rem 0 0 0;
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-    }
-    .socials a {
-      color: #1e293b;
-      font-size: 1.6rem;
-      transition: color .2s;
-    }
-    .socials a:hover {
-      color: #2563eb;
-    }
-    /* About section */
-    #about .container {
-      max-width: 900px;
-    }
-    #about p {
-      font-size: 1.1rem;
-      color: #334155;
-      line-height: 1.7;
-      margin-bottom: 2.5rem;
-    }
-    .about-contacts {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.25rem;
-      max-width: 600px;
-      margin: 0 auto;
-      font-size: 1rem;
-    }
-    .about-contacts .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      justify-content: center;
-    }
-    .about-contacts a {
-      color: #0369a1;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color .2s;
-    }
-    .about-contacts a:hover {
-      text-decoration: underline;
-      color: #2563eb;
-    }
-    /* Experience Tabs */
-    .tab-btn {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 600;
-      padding: 0.75rem 2.5rem;
-      border-radius: 9999px;
-      cursor: pointer;
-      border: none;
-      margin-right: 1rem;
-      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-      font-size: 1rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.75rem;
-      box-shadow: 0 1px 5px rgba(0,0,0,0.04);
-      outline: none;
-    }
-    .tab-btn.active-marketing {
-      background: #e0f2fe;
-      color: #0369a1;
-      box-shadow: 0 2px 10px rgba(3,105,161,0.09);
-    }
-    .tab-btn:not(.active-marketing) {
-      background: #f1f5f9;
-      color: #64748b;
-    }
-    .tab-btn.active-sustainability {
-      background: #d9f99d;
-      color: #15803d;
-      box-shadow: 0 2px 10px rgba(21,128,61,0.09);
-    }
-    .tab-btn:not(.active-sustainability) {
-      background: #f1f5f9;
-      color: #64748b;
-    }
-    .tab-btn:focus {
-      outline: 2px solid #bae6fd;
-    }
-    .tab-content {
-      display: none;
-    }
-    .tab-content.active {
-      display: block;
-      animation: fadeIn 0.4s;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0;}
-      to { opacity: 1;}
-    }
-    /* Experience Cards */
-    .company-logo {
-      width: 56px;
-      height: 56px;
-      object-fit: contain;
-      border-radius: 0.5rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-      background: #f9fafb;
-      display: block;
-      margin-bottom: 0.5rem;
-    }
-    .bg-white {
-      background: #fff;
-    }
-    .rounded-lg {
-      border-radius: 1rem;
-    }
-    .shadow-md {
-      box-shadow: 0 4px 16px rgba(30,41,59,0.05);
-    }
-    .p-6 {
-      padding: 1.5rem;
-    }
-    .mt-6 { margin-top: 1.5rem;}
-    .mb-6 { margin-bottom: 1.5rem;}
-    .mb-4 { margin-bottom: 1rem;}
-    .space-y-2 > * + * { margin-top: .5rem; }
-    .space-y-3 > * + * { margin-top: .75rem; }
-    .space-y-8 > * + * { margin-top: 2rem; }
-    .max-w-4xl { max-width: 900px;}
-    .mx-auto { margin-left: auto; margin-right: auto;}
-    .text-green-800 { color: #166534;}
-    .text-green-600 { color: #16a34a;}
-    .text-xl { font-size: 1.25rem; }
-    .font-semibold { font-weight: 600;}
-    .font-bold { font-weight: 700;}
-    .text-gray-800 { color: #22223b;}
-    .text-gray-600 { color: #475569;}
-    .text-gray-700 { color: #374151;}
-    .text-base { font-size: 1rem;}
-    .list-disc { list-style-type: disc;}
-    .list-inside { list-style-position: inside;}
-    @media (max-width: 768px) {
-      .about-contacts { grid-template-columns: 1fr; }
-      .flex, .md\\:flex-row { flex-direction: column!important; }
-      .md\\:w-1\\/4, .md\\:w-3\\/4 { width: 100%!important;}
-      .max-w-4xl { padding: 0 1rem; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aswin Raj - Portfolio</title>
+<link rel="icon" href="assets/Profile/Profile%20Pic.jpg" type="image/jpeg">
+<!-- Tailwind CSS -->
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="css/smooth-scroll.css">   
+<style>
+.section { padding: 4rem 0; }
+.section-header { text-align: center; margin-bottom: 3rem; }
+.section-header h2 { font-size: 2.5rem; font-weight: bold; color: #2d3748; }
+.nav-link { color: #4a5568; transition: color 0.3s; }
+.nav-link:hover, .nav-link.active { color: #2b6cb0; }
+.hero { position: relative; height: 100vh; display: flex; align-items: center; justify-content: center; color: white; }
+.hero-image { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
+.hero-content { position: relative; z-index: 1; }
+.card { background: white; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);}
+img { display: block; max-width: 100%; height: auto;}
+.rounded-lg { border-radius: 0.5rem;}
+.shadow-md { box-shadow: 0 4px 6px rgba(0,0,0,0.1);}
+.w-full { width: 100%;}
+.h-auto { height: auto;}
+</style>
 </head>
-<body>
+<body class="bg-gray-50 font-inter">
+<script>
+// Responsive Navbar Toggle Script for Portfolio
 
-  <!-- Hero Section -->
-  <section id="hero">
-    <div class="container">
-      <h1>Ashwin Sivaprakash</h1>
-      <p>
-        Clean tech marketer with a passion for climate innovation and data-driven growth. 
-        From iGaming to carbon removal, I help teams achieve sustainable results through campaigns that convert.<br>
-        <a href="#contact" class="btn-primary">Contact Me</a>
-      </p>
-      <div class="socials">
-        <a href="https://linkedin.com/in/aswin-sivaprakash" target="_blank" aria-label="LinkedIn">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://github.com/Ash-Impactco" target="_blank" aria-label="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
-    </div>
-  </section>
+document.addEventListener('DOMContentLoaded', function () {
+// Toggle mobile menu visibility
+const menuToggle = document.getElementById('menu-toggle');
+const menu = document.getElementById('menu');
 
-  <!-- About Section -->
-  <section id="about" class="section">
-    <div class="container">
-      <div class="section-header">
-        <h2>About</h2>
-      </div>
-      <div class="max-w-4xl mx-auto">
-        <p>
-          I’m a clean tech marketer helping climate-focused teams grow with data-driven campaigns that actually convert. 
-          Lately, I’ve been diving deep into climate innovation, especially carbon removal, and I'm here for the long game—whether it's as a marketer or a hands-on consultant.
-        </p>
-        <div class="about-contacts">
-          <div class="contact-item">
-            <i class="fas fa-envelope text-blue-600 text-xl"></i>
-            <a href="mailto:aswinr63@gmail.com">aswinr63@gmail.com</a>
-          </div>
-          <div class="contact-item">
-            <i class="fas fa-map-marker-alt text-blue-600 text-xl"></i>
-            <a href="https://www.google.com/maps/place/Porto,+Portugal" target="_blank">Porto, Portugal</a>
-          </div>
-          <div class="contact-item">
-            <i class="fas fa-phone text-blue-600 text-xl"></i>
-            <a href="tel:+351938816822">+351 938816822</a>
-          </div>
-          <div class="contact-item">
-            <i class="fab fa-linkedin text-blue-600 text-xl"></i>
-            <a href="https://linkedin.com/in/aswin-sivaprakash" target="_blank">LinkedIn</a>
-            <span class="mx-2">|</span>
-            <i class="fab fa-github text-gray-900 text-xl"></i>
-            <a href="https://github.com/Ash-Impactco" target="_blank">GitHub</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+if (menuToggle && menu) {
+menuToggle.addEventListener('click', function () {
+menu.classList.toggle('hidden');
+});
+}
 
-  <!-- Experience Section -->
-  <section id="experience" class="section">
-    <div class="container">
-      <div class="section-header mb-6">
-        <h2>Experience</h2>
-      </div>
-      <!-- Tabs -->
-      <div class="flex mb-8" style="justify-content:center;">
-        <button id="marketingTab" class="tab-btn active-marketing" onclick="showTab('marketing')">
-          <i class="fas fa-bullhorn"></i> Marketing
-        </button>
-        <button id="sustainabilityTab" class="tab-btn" onclick="showTab('sustainability')">
-          <i class="fas fa-leaf"></i> Sustainability
-        </button>
-      </div>
-      <!-- Tab Contents -->
-      <div id="marketing" class="tab-content active">
-        <div class="max-w-4xl mx-auto space-y-8">
-          <!-- Customer Success & Marketing Specialist -->
-          <div class="bg-white p-6 rounded-lg shadow-md flex flex-col md:flex-row gap-6">
-            <div class="md:w-1/4 flex flex-col items-center justify-start">
-              <img src="assets/Companies/igaming.png" alt="iGaming" class="company-logo">
-            </div>
-            <div class="md:w-3/4">
-              <h4 class="font-semibold text-gray-800">Customer Success & Marketing Specialist</h4>
-              <p class="text-gray-600">Porto (June 2024 - April 2025)</p>
-              <ul class="list-disc list-inside text-gray-600 space-y-2 mt-2">
-                <li>Collaborated with the marketing team to develop data-driven promotional strategies using HubSpot, leading to a 25% increase in customer retention across all regions.</li>
-                <li>Executed bulk messaging campaigns targeting 10,000+ clients, driving a 15% uplift in player engagement and a 10% increase in deposits.</li>
-                <li>Oversaw player engagement and retention initiatives, contributing to a 20% overall growth in customer lifetime value across Asian, African, and Brazilian markets.</li>
-                <li>Handled over 100 customer inquiries daily via chat for iGaming platforms like Bet365, Bet Barter, Aposta Real, and Sky247, ensuring timely resolution of betting issues and account management.</li>
-                <li>Monitored and escalated complex bet disputes to RFBA, CRM, or OPS teams using 9 Wickets, achieving a 95% resolution rate within 24 hours.</li>
-                <li>Assisted over 300 clients monthly with account registrations, deposits, and withdrawals, contributing to a seamless user experience across Asian, African, and Brazilian markets.</li>
-                <li>Managed a portfolio of 150+ VIP customers, conducting telemarketing campaigns that resulted in a 20% increase in high-value customer engagement.</li>
-                <li>Promoted new bonuses and offers, leading to the reactivation of 30% of dormant VIP accounts across targeted regions.</li>
-              </ul>
-            </div>
-          </div>
-          <!-- Business Development Manager -->
-          <div class="bg-white p-6 rounded-lg shadow-md flex flex-col md:flex-row gap-6">
-            <div class="md:w-1/4 flex flex-col items-center justify-start">
-              <img src="assets/Companies/National Chromotogrpahy Inco.jpeg" alt="National Chromatography" class="company-logo">
-            </div>
-            <div class="md:w-3/4">
-              <h4 class="font-semibold text-gray-800">Business Development Manager</h4>
-              <p class="text-gray-600">National Chromatography Inco, Europe (Oct 2022 - May 2024)</p>
-              <ul class="list-disc list-inside text-gray-600 space-y-2 mt-2">
-                <li>Acquired consistent new business with well-formulated and executed strategies based on market expertise.</li>
-                <li>Collaborated with sales and business development teams to fulfill bids, RFP, and tender under strict timelines.</li>
-                <li>Contributed to bottom line revenue by attaining 80% of sales quota.</li>
-                <li>Revitalized marketing efforts employing streamlined processes and rebranding initiatives.</li>
-                <li>Prospected and qualified marketing leads from the pharmaceutical industry using Salesforce CRM attaining conversion rates of 13%.</li>
-                <li>Amplified international sales by selling pharmaceutical stocks worth $35k across North America and South Asia.</li>
-                <li>Liaised with directors, R&D team, sales and procurement team, dispatch and management teams through weekly and monthly meetings.</li>
-              </ul>
-            </div>
-          </div>
-          <!-- Client Relationship Specialist -->
-          <div class="bg-white p-6 rounded-lg shadow-md flex flex-col md:flex-row gap-6">
-            <div class="md:w-1/4 flex flex-col items-center justify-start">
-              <img src="assets/Companies/Eurail.png" alt="Eurail" class="company-logo">
-            </div>
-            <div class="md:w-3/4">
-              <h4 class="font-semibold text-gray-800">Client Relationship Specialist</h4>
-              <p class="text-gray-600">Eurail, Netherlands (Sept 2022 - Aug 2023)</p>
-              <ul class="list-disc list-inside text-gray-600 space-y-2 mt-2">
-                <li>Addressed customer inquiries through phone, email, and chat channels.</li>
-                <li>Diagnosed and troubleshooted customer problems while delivering technical assistance.</li>
-                <li>Monitored and escalated complex bet disputes to RFBA, CRM, or OPS teams using 9 Wickets.</li>
-                <li>Assisted over 300 clients monthly with account registrations, deposits, and withdrawals.</li>
-                <li>Managed a portfolio of 150+ VIP customers, conducting telemarketing campaigns that resulted in a 20% increase in high-value customer engagement.</li>
-                <li>Promoted new bonuses and offers, leading to the reactivation of 30% of dormant VIP accounts across targeted regions.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="sustainability" class="tab-content">
-        <div class="max-w-4xl mx-auto space-y-8">
-          <!-- Environmental Assistant -->
-          <div class="bg-white p-6 rounded-lg shadow-md flex flex-col md:flex-row gap-6">
-            <div class="md:w-1/4 flex flex-col items-center justify-start">
-              <img src="assets/Companies/MGK Aqua Inco.png" alt="MGK Aqua Inco" class="company-logo">
-            </div>
-            <div class="md:w-3/4">
-              <h4 class="font-semibold text-green-800 text-xl mb-1"><i class="fas fa-leaf text-green-600 mr-2"></i>Environmental Assistant</h4>
-              <p class="text-gray-600">MGK Aqua Inco, India (Nov 2020 – Aug 2021)</p>
-              <ul class="list-disc list-inside text-gray-600 space-y-2 mt-2">
-                <li>Developed Detailed Project Reports (DPRs) on sustainability, climate change, GHG management, and energy efficiency for BOSCH, PepsiCo, and multiple textile and tanning companies.</li>
-                <li>Led water treatment initiatives for 15+ residential and corporate projects by analyzing BOD, DO, TSS, and other parameters, and implementing clarifiers, rainwater harvesting, and automated wastewater treatment systems.</li>
-                <li>Designed coagulant/flocculant specifications and supported the installation of drinking water setups, acoustic blowers, and ETPs, resolving on-site issues to ensure timely project completion.</li>
-                <li>Conducted waste management training during corporate/public events and utilized Agile/Kanban methods for sales tracking and stakeholder engagement.</li>
-              </ul>
-            </div>
-          </div>
-          <!-- Project Assistant -->
-          <div class="bg-white p-6 rounded-lg shadow-md flex flex-col md:flex-row gap-6">
-            <div class="md:w-1/4 flex flex-col items-center justify-start">
-              <img src="assets/Companies/UNICEF.png" alt="UNICEF" class="company-logo">
-            </div>
-            <div class="md:w-3/4">
-              <h4 class="font-semibold text-green-800 text-xl mb-1"><i class="fas fa-leaf text-green-600 mr-2"></i>Project Assistant</h4>
-              <p class="text-gray-600">UNICEF, Water Sanitation and Hygiene (WASH), India (Jul 2018 - Jun 2019)</p>
-              <ul class="list-disc list-inside text-gray-600 space-y-2 mt-2">
-                <li>Collaborated with government officials to report progress and negotiate budgets for environmental sustainability and GHG management projects, including solar stove and water pump installations.</li>
-                <li>Researched, drafted, and edited proposals and executive reports, identifying opportunities to enhance project outcomes. Streamlined water testing by analyzing 63 parameters and integrated solar-powered stoves for over 10,000 tea estate residents, encouraging alternatives to conventional coal and scrapwood cooking.</li>
-                <li>Modernized the preliminary designs for water pumps and beddings in 16 tea estates across Dibrugarh, Assam, providing access to fresh water and usage of honeycomb toilets for efficient use and cost saving.</li>
-              </ul>
-            </div>
-          </div>
-          <!-- Sustainability Consultant -->
-          <div class="bg-white p-6 rounded-lg shadow-md flex flex-col md:flex-row gap-6">
-            <div class="md:w-1/4 flex flex-col items-center justify-start">
-              <img src="assets/Companies/Beyond Sustainability.png" alt="Beyond Sustainability" class="company-logo">
-            </div>
-            <div class="md:w-3/4">
-              <h4 class="font-semibold text-green-800 text-xl mb-1"><i class="fas fa-leaf text-green-600 mr-2"></i>Sustainability Consultant</h4>
-              <p class="text-gray-600">Freelance, Porto (2024 - 2025)</p>
-              <ul class="list-disc list-inside text-gray-600 space-y-3 mt-2">
-                <li>Advised startups on integrating sustainability metrics into their business models and reporting</li>
-                <li>Developed ESG strategy playbooks for clients in energy and e-mobility</li>
-                <li>Worked with teams to improve carbon accounting and climate reporting transparency</li>
-                <li>Organized workshops on climate innovation and sustainable business practices</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+// Optional: Close menu when a nav link is clicked (for smoother mobile UX)
+const navLinks = document.querySelectorAll('#menu a');
+navLinks.forEach(function(link) {
+link.addEventListener('click', function() {
+if (window.innerWidth < 768) { // md breakpoint for Tailwind
+menu.classList.add('hidden');
+}
+});
+});
 
-  <!-- Contact Section -->
-  <section id="contact" class="section">
-    <div class="container">
-      <div class="section-header">
-        <h2>Contact</h2>
-      </div>
-      <div class="max-w-4xl mx-auto text-center">
-        <p class="mb-4">Interested in collaborating or have a project in mind? Reach out below!</p>
-        <form action="mailto:aswinr63@gmail.com" method="post" enctype="text/plain" class="space-y-4">
-          <input type="text" name="Name" placeholder="Your Name" required style="padding: 0.75rem; width: 50%; border-radius: 0.5rem; border: 1px solid #cbd5e1; font-size: 1rem;">
-          <br>
-          <input type="email" name="Email" placeholder="Your Email" required style="padding: 0.75rem; width: 50%; border-radius: 0.5rem; border: 1px solid #cbd5e1; font-size: 1rem;">
-          <br>
-          <textarea name="Message" placeholder="Your Message" rows="5" required style="padding: 0.75rem; width: 50%; border-radius: 0.5rem; border: 1px solid #cbd5e1; font-size: 1rem;"></textarea>
-          <br>
-          <button class="btn-primary" type="submit">Send</button>
-        </form>
-      </div>
-    </div>
-  </section>
+// Smooth scroll for internal navigation (anchors)
+const anchorLinks = document.querySelectorAll('a[href^="#"]');
+anchorLinks.forEach(function(link) {
+link.addEventListener('click', function(e) {
+const targetId = this.getAttribute('href').substring(1);
+const targetElement = document.getElementById(targetId);
+if (targetElement) {
+e.preventDefault();
+targetElement.scrollIntoView({ behavior: 'smooth' });
+}
+});
+});
+});
+</script>
 
-  <script>
-    // Smooth scroll for all anchor links (if not handled by CSS)
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
-    });
-    // Experience Tabs Logic
-    function showTab(tab) {
-      const marketingTab = document.getElementById('marketingTab');
-      const sustainabilityTab = document.getElementById('sustainabilityTab');
-      const marketing = document.getElementById('marketing');
-      const sustainability = document.getElementById('sustainability');
-      if(tab === 'marketing') {
-        marketingTab.classList.add('active-marketing');
-        marketingTab.classList.remove('active-sustainability');
-        sustainabilityTab.classList.remove('active-sustainability','active-marketing');
-        marketing.classList.add('active');
-        sustainability.classList.remove('active');
-      } else {
-        sustainabilityTab.classList.add('active-sustainability');
-        sustainabilityTab.classList.remove('active-marketing');
-        marketingTab.classList.remove('active-marketing','active-sustainability');
-        sustainability.classList.add('active');
-        marketing.classList.remove('active');
-      }
-    }
-  </script>
+<!-- Navigation -->
+<nav class="fixed w-full bg-white shadow-md z-50" aria-label="Main navigation">
+<div class="container mx-auto px-4 py-4">
+<div class="flex justify-between items-center">
+<a href="#home" class="text-2xl font-bold text-blue-600">Aswin Raj</a>
+<!-- Desktop menu -->
+<div class="hidden md:flex space-x-8">
+<a href="#home" class="nav-link">Home</a>
+<a href="#about" class="nav-link">About</a>
+<a href="#skills" class="nav-link">Skills</a>
+<a href="#experience" class="nav-link">Experience</a>
+<a href="#projects" class="nav-link">Projects</a>
+<a href="#ventures" class="nav-link">Ventures</a>
+<a href="#education" class="nav-link">Education</a>
+<a href="#certifications" class="nav-link">Certifications</a>
+<a href="#contact" class="nav-link">Contact</a>
+</div>
+<!-- Mobile menu button -->
+<button class="md:hidden" id="mobile-menu-button" aria-label="Open menu">
+<i class="fas fa-bars text-2xl"></i>
+</button>
+</div>
+</div>
+<div class="md:hidden fixed w-full bg-white shadow-md z-40 transform -translate-y-full transition-transform duration-300" id="mobile-menu">
+<div class="container mx-auto px-4 py-4">
+<div class="flex flex-col space-y-4">
+<a href="#home" class="nav-link">Home</a>
+<a href="#about" class="nav-link">About</a>
+<a href="#skills" class="nav-link">Skills</a>
+<a href="#experience" class="nav-link">Experience</a>
+<a href="#projects" class="nav-link">Projects</a>
+<a href="#ventures" class="nav-link">Ventures</a>
+<a href="#education" class="nav-link">Education</a>
+<a href="#certifications" class="nav-link">Certifications</a>
+<a href="#contact" class="nav-link">Contact</a>
+</div>
+</div>
+</div>
+</nav>
+
+<main id="home">
+
+<!-- Hero Section -->
+<section class="hero" id="hero">
+<img src="assets/Profile/vestaearth_cover.jpeg" alt="Portfolio Cover" class="hero-image" loading="lazy">
+<div class="container mx-auto px-4 text-center hero-content">
+<div class="max-w-3xl mx-auto">
+<!-- Profile picture removed as per your request -->
+<h1 class="text-5xl md:text-6xl font-bold mb-4">Aswin Raj Sivaprakash</h1>
+<h2 class="text-2xl md:text-3xl mb-8">Business Executive / Customer Support</h2>
+<div class="flex flex-wrap justify-center space-x-4">
+<a href="#contact" class="bg-white text-blue-600 px-8 py-3 rounded-full hover:bg-gray-100 transition-colors mb-2">Contact Me</a>
+<a href="mailto:aswinr63@gmail.com" class="border-2 border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-blue-600 transition-colors mb-2">Email Me</a>
+<a href="assets/Resume/Aswin Resume.pdf" download class="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-colors flex items-center mb-2">
+<i class="fas fa-download mr-2"></i> Download CV
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Google Fonts: Montserrat -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+<section id="about" class="section" style="font-family: 'Montserrat', sans-serif;">
+<div class="container mx-auto px-4">
+<div class="section-header">
+<h2 class="text-2xl font-bold mb-4 text-center">About</h2>
+</div>
+<div class="max-w-4xl text-gray-700 text-lg leading-relaxed text-center">
+<p>
+I’m a clean tech marketer helping climate-focused teams grow with data-driven campaigns that actually convert. Lately, I’ve been diving deep into climate innovation, especially carbon removal, and I'm here for the long game—whether it's as a marketer or a hands-on consultant.
+</p>
+<!-- Contact Info Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 text-base justify-items-center">
+<div class="flex items-center justify-center space-x-4">
+<i class="fas fa-envelope text-blue-600 text-xl"></i>
+<a href="mailto:aswinr63@gmail.com" class="hover:text-blue-600">aswinr63@gmail.com</a>
+</div>
+<div class="flex items-center justify-center space-x-4">
+<i class="fas fa-map-marker-alt text-blue-600 text-xl"></i>
+<a href="https://www.google.com/maps/place/Porto,+Portugal" target="_blank" class="hover:text-blue-600">Porto, Portugal</a>
+</div>
+<div class="flex items-center justify-center space-x-4">
+<i class="fas fa-phone text-blue-600 text-xl"></i>
+<a href="tel:+351938816822" class="hover:text-blue-600">+351 938816822</a>
+</div>
+<div class="flex items-center justify-center space-x-4">
+<i class="fab fa-linkedin text-blue-600 text-xl"></i>
+<a href="https://linkedin.com/in/aswin-sivaprakash" target="_blank" class="hover:text-blue-600 font-semibold">Linkedin</a>
+<span class="mx-2">|</span>
+<i class="fab fa-github text-gray-900 text-xl"></i>
+<a href="https://github.com/Ash-Impactco" target="_blank" class="hover:text-blue-600 font-semibold">GitHub</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Insert your expanded About, Education, Skills, Certifications, Experience, Projects, Ventures, and Contact sections here, following the expanded format you provided. -->
+
+<!-- MARKETING EXPERIENCE -->
+<div class="card p-6 mb-8">
+<h3 class="text-xl font-bold mb-4">Marketing Experience</h3>
+
+<h4 class="font-semibold text-gray-800">Clean Tech Marketer</h4>
+<p class="text-gray-600">Freelance, Porto (April 2025 - Present)</p>
+<ul class="list-disc list-inside text-gray-600 space-y-2 mt-2">
+<li>Executed full-funnel B2B demand generation campaigns for early-stage climate tech startups including Windcredibles, ProClime, and Beyond Sustainability, driving a 2× increase in SQLs and contributing in pipeline.</li>
+<li>Reduced CAC by 10% through SEO, Google Ads, and LinkedIn campaigns under Cleantech Growthlab, generating 20,000+ impressions and 300+ top-of-funnel conversions.</li>
+<li>Built ABM workflows and email nurture sequences in HubSpot, improving engagement and aligning GTM strategies across sustainability, energy, and mobility sectors.</li>
+<li>Conducted SEO audits and content updates that boosted site traffic by 40% and improved MQL conversion for clean energy.</li>
+</ul>
+
+<h4 class="font-semibold text-gray-800 mt-6">Customer Success & Marketing Specialist</h4>
+<p class="text-gray-600">Porto (June 2024 - April 2025)</p>
+<ul class="list-disc list-inside text-gray-600 space-y-2 mt-2">
+<li>Collaborated with the marketing team to develop data-driven promotional strategies using HubSpot, leading to a 25% increase in customer retention across all regions.</li>
+<li>Executed bulk messaging campaigns targeting 10,000+ clients, driving a 15% uplift in player engagement and a 10% increase in deposits.</li>
+<li>Oversaw player engagement and retention initiatives, contributing to a 20% overall growth in customer lifetime value across Asian, African, and Brazilian markets.</li>
+<li>Handled over 100 customer inquiries daily via chat for iGaming platforms like Bet365, Bet Barter, Aposta Real, and Sky247, ensuring timely resolution of betting issues and account management.</li>
+<li>Monitored and escalated complex bet disputes to RFBA, CRM, or OPS teams using 9 Wickets, achieving a 95% resolution rate within 24 hours.</li>
+<li>Assisted over 300 clients monthly with account registrations, deposits, and withdrawals, contributing to a seamless user experience across Asian, African, and Brazilian markets.</li>
+<li>Managed a portfolio of 150+ VIP customers, conducting telemarketing campaigns that resulted in a 20% increase in high-value customer engagement.</li>
+<li>Promoted new bonuses and offers, leading to the reactivation of 30% of dormant VIP accounts across targeted regions.</li>
+</ul>
+
+<div class="flex flex-col md:flex-row gap-6 mt-6">
+<div class="md:w-1/4">
+<img src="assets/Companies/National Chromotogrpahy Inco.jpeg" alt="National Chromatography" class="w-full h-auto rounded-lg shadow-md">
+</div>
+<div class="md:w-3/4">
+<h4 class="font-semibold text-gray-800">Business Development Manager</h4>
+<p class="text-gray-600">National Chromatography Inco, Europe (Oct 2022 - May 2024)</p>
+<ul class="list-disc list-inside text-gray-600 space-y-2 mt-2">
+<li>Acquired consistent new business with well-formulated and executed strategies based on market expertise.</li>
+<li>Collaborated with sales and business development teams to fulfill bids, RFP, and tender under strict timelines.</li>
+<li>Contributed to bottom line revenue by attaining 80% of sales quota.</li>
+<li>Revitalized marketing efforts employing streamlined processes and rebranding initiatives.</li>
+<li>Prospected and qualified marketing leads from the pharmaceutical industry using Salesforce CRM attaining conversion rates of 13%.</li>
+<li>Amplified international sales by selling pharmaceutical stocks worth $35k across North America and South Asia.</li>
+<li>Liaised with directors, R&D team, sales and procurement team, dispatch and management teams through weekly and monthly meetings.</li>
+</ul>
+</div>
+</div>
+
+<div class="flex flex-col md:flex-row gap-6 mt-6">
+<div class="md:w-1/4">
+<img src="assets/Companies/Eurail.png" alt="Eurail" class="w-full h-auto rounded-lg shadow-md">
+</div>
+<div class="md:w-3/4">
+<h4 class="font-semibold text-gray-800">Client Relationship Specialist</h4>
+<p class="text-gray-600">Eurail, Netherlands (Sept 2022 - Aug 2023)</p>
+<ul class="list-disc list-inside text-gray-600 space-y-2 mt-2">
+<li>Addressed customer inquiries through phone, email, and chat channels.</li>
+<li>Diagnosed and troubleshooted customer problems while delivering technical assistance.</li>
+<li>Monitored and escalated complex bet disputes to RFBA, CRM, or OPS teams using 9 Wickets.</li>
+<li>Assisted over 300 clients monthly with account registrations, deposits, and withdrawals.</li>
+<li>Managed a portfolio of 150+ VIP customers, conducting telemarketing campaigns that resulted in a 20% increase in high-value customer engagement.</li>
+<li>Promoted new bonuses and offers, leading to the reactivation of 30% of dormant VIP accounts across targeted regions.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<!-- SUSTAINABILITY EXPERIENCE -->
+<div class="card p-6">
+<h3 class="text-xl font-bold mb-4">Sustainability Experience</h3>
+
+<h4 class="font-semibold text-gray-800">Environmental Assistant</h4>
+<p class="text-gray-600">MGK Aqua Inco, India (Nov 2020 – Aug 2021)</p>
+<ul class="list-disc list-inside text-gray-600 space-y-2 mt-2">
+<li>Developed Detailed Project Reports (DPRs) on sustainability, climate change, GHG management, and energy efficiency for BOSCH, PepsiCo, and multiple textile and tanning companies.</li>
+<li>Led water treatment initiatives for 15+ residential and corporate projects by analyzing BOD, DO, TSS, and other parameters, and implementing clarifiers, rainwater harvesting, and automated wastewater treatment systems.</li>
+<li>Designed coagulant/flocculant specifications and supported the installation of drinking water setups, acoustic blowers, and ETPs, resolving on-site issues to ensure timely project completion.</li>
+<li>Conducted waste management training during corporate/public events and utilized Agile/Kanban methods for sales tracking and stakeholder engagement.</li>
+</ul>
+
+<h4 class="font-semibold text-gray-800 mt-6">Project Assistant</h4>
+<p class="text-gray-600">UNICEF, Water Sanitation and Hygiene (WASH), India (Jul 2018 - Jun 2019)</p>
+<ul class="list-disc list-inside text-gray-600 space-y-2 mt-2">
+<li>Collaborated with government officials to report progress and negotiate budgets for environmental sustainability and GHG management projects, including solar stove and water pump installations.</li>
+<li>Researched, drafted, and edited proposals and executive reports, identifying opportunities to enhance project outcomes. Streamlined water testing by analyzing 63 parameters and integrated solar-powered stoves for over 10,000 tea estate residents, encouraging alternatives to conventional coal and scrapwood cooking.</li>
+<li>Modernized the preliminary designs for water pumps and beddings in 16 tea estates across Dibrugarh, Assam, providing access to fresh water and usage of honeycomb toilets for efficient use and cost saving.</li>
+</ul>
+</div>
+
+
+</main>
+
+<footer class="text-center py-6 bg-gray-100 mt-8">
+<div class="container mx-auto text-gray-600 text-sm">
+&copy; 2025 AswinRaj. Built with ❤️ using Tailwind CSS.
+</div>
+</footer>
+
+<script>
+// Mobile menu toggle
+const menuBtn = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+menuBtn.addEventListener('click', () => {
+mobileMenu.classList.toggle('-translate-y-full');
+});
+// Close mobile menu on link click
+mobileMenu.querySelectorAll('a').forEach(link => {
+link.addEventListener('click', () => {
+mobileMenu.classList.add('-translate-y-full');
+});
+});
+// Smooth scroll and active nav highlighting
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+const target = document.querySelector(this.getAttribute('href'));
+if (target) {
+e.preventDefault();
+target.scrollIntoView({ behavior: 'smooth' });
+}
+});
+});
+// Highlight nav on scroll
+const navLinks = document.querySelectorAll('.nav-link');
+const sections = Array.from(document.querySelectorAll('section[id]'));
+window.addEventListener('scroll', () => {
+const scrollPos = window.scrollY + 72; // nav height
+let currentSection = sections[0];
+for (const section of sections) {
+if (section.offsetTop <= scrollPos) currentSection = section;
+}
+navLinks.forEach(link => link.classList.remove('active'));
+const activeLink = Array.from(navLinks).find(link => link.getAttribute('href') === `#${currentSection.id}`);
+if (activeLink) activeLink.classList.add('active');
+});
+</script>
 </body>
 </html>
