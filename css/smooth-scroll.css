@@ -1,0 +1,6 @@
+/* css/smooth-scroll.css */
+
+/* Enables smooth scrolling for anchor links throughout the site */
+html {
+  scroll-behavior: smooth;
+}
