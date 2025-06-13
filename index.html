@@ -9,18 +9,14 @@
 </head>
 <body>
     <!-- Navigation Toggle -->
-    <div class="nav-toggle">
-        <button id="navToggleBtn">
-            <i class="fas fa-bars"></i>
-        </button>
-    </div>
+    <button class="nav-toggle" aria-label="Toggle Navigation">
+        <i class="fas fa-bars"></i>
+    </button>
 
     <!-- Navigation Menu -->
-    <nav class="side-nav" id="sideNav">
+    <nav class="nav-menu">
         <ul>
-            <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
@@ -31,91 +27,44 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section id="hero" class="hero-section">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <div class="profile-image">
-                <img src="assets/Profile/Profile Pic.jpg" alt="Aswin Sivaprakash">
-            </div>
+            <img src="assets/Profile/Profile Pic.jpg" alt="Aswin Sivaprakash" class="profile-image">
             <h1>Aswin Sivaprakash</h1>
             <h2>Clean Tech Marketer & Project Assistant</h2>
-            <div class="social-links">
-                <a href="https://linkedin.com/in/aswin-sivaprakash" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/Ash-Impactco" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="mailto:aswinr63@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-                <a href="tel:+351938816822" title="Phone"><i class="fas fa-phone"></i></a>
-                <a href="#" title="Location"><i class="fas fa-map-marker-alt"></i> Porto, Portugal</a>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="section">
-        <div class="container">
+        <div class="section-header">
             <h2>About Me</h2>
-            <div class="about-content">
-                <div class="profile-image">
-                    <img src="assets/profile.jpg" alt="Aswin Sivaprakash">
-                </div>
-                <div class="about-text">
-                    <p>I've led marketing strategies across Clean Tech, Pharma, Travel, and IGaming—boosting leads by 35% and ROI by 22% across European markets. Now, I'm looking to dive into the carbon removal space, with a growing interest in enhanced rock weathering and other climate solutions. Ideally, this is the last time I update my resume—I'm here to build something long-term in climate.</p>
-                </div>
-            </div>
+            <button class="toggle-btn" data-section="about">Toggle</button>
         </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="section">
-        <div class="container mx-auto px-4">
-            <div class="section-header">
-                <h2>Education</h2>
-            </div>
-            <div class="max-w-4xl mx-auto space-y-6">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex flex-col md:flex-row gap-6">
-                        <div class="md:w-1/3">
-                            <img src="assets/University/Uni Twente.jpeg" alt="University of Twente" class="w-full h-auto rounded-lg shadow-md">
-                        </div>
-                        <div class="md:w-2/3">
-                            <h3 class="text-xl font-semibold text-gray-800">University of Twente</h3>
-                            <p class="text-gray-600">MSc in Environmental and Energy Management</p>
-                            <p class="text-gray-700 mt-2">Specialized in sustainable development and environmental management.</p>
-                            <div class="mt-4">
-                                <h4 class="font-semibold text-gray-800">Relevant Coursework:</h4>
-                                <ul class="list-disc list-inside text-gray-600 mt-2 space-y-2">
-                                    <li>Energy Management – Analyzed renewable energy systems, corporate energy strategies, and sustainable infrastructure planning. Worked with tools like HOMER Energy and RETScreen for scenario modeling and project feasibility.</li>
-                                    <li>Digitalisation & Sustainability – Studied how digital tools accelerate clean-tech deployment. Gained experience using Power BI for sustainability data analysis and Python for basic energy data scripting.</li>
-                                    <li>Case Project in Energy Management – Led a team-based project tackling a real-world grid congestion issue. Applied GIS (QGIS) for spatial energy mapping and Excel VBA for custom ROI and emissions modeling.</li>
-                                </ul>
-                                <div class="mt-4">
-                                    <a href="https://www.omropfryslan.nl/nl/nieuws/1144457/internationale-studenten-duurzame-aanpak-in-fryslan-is-mogelijk" target="_blank" class="text-blue-600 hover:text-blue-800">
-                                        <i class="fas fa-external-link-alt"></i> View Geothermal Energy Project Publication
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="section-content" id="about-content">
+            <p>I've led marketing strategies across Clean Tech, Pharma, Travel, and IGaming—boosting leads by 35% and ROI by 22% across European markets. Now, I'm looking to dive into the carbon removal space, with a growing interest in enhanced rock weathering and other climate solutions.</p>
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://linkedin.com/in/aswin-sivaprakash" target="_blank">linkedin.com/in/aswin-sivaprakash</a>
                 </div>
-
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex flex-col md:flex-row gap-6">
-                        <div class="md:w-1/3">
-                            <img src="assets/University/Amity uni.png" alt="Amity University" class="w-full h-auto rounded-lg shadow-md">
-                        </div>
-                        <div class="md:w-2/3">
-                            <h3 class="text-xl font-semibold text-gray-800">Amity University</h3>
-                            <p class="text-gray-600">BSc in Environmental Science</p>
-                            <p class="text-gray-700 mt-2">Focused on environmental studies and sustainable development.</p>
-                            <div class="mt-4">
-                                <h4 class="font-semibold text-gray-800">Relevant Bachelor's Coursework & Certifications:</h4>
-                                <ul class="list-disc list-inside text-gray-600 mt-2 space-y-2">
-                                    <li>Environmental Impact Assessment (EIA) – Applied EIA frameworks to assess and mitigate environmental risks in real-world project scenarios.</li>
-                                    <li>Geographic Information Systems (GIS) – Developed spatial analysis skills using GIS tools for environmental monitoring and clean-tech site planning.</li>
-                                    <li>ISO 14001 & NEBOSH (IGC) – Completed training in environmental management systems (ISO 14001) and international health, safety, and environmental compliance (NEBOSH IGC) during university.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                <div class="info-item">
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/Ash-Impactco" target="_blank">github.com/Ash-Impactco</a>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:aswinr63@gmail.com">aswinr63@gmail.com</a>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+351 938816822</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Porto, Portugal</span>
                 </div>
             </div>
         </div>
@@ -123,103 +72,41 @@
 
     <!-- Skills Section -->
     <section id="skills" class="section">
-        <div class="container mx-auto px-4">
-            <div class="section-header">
-                <h2>Skills</h2>
-            </div>
-            <div class="max-w-4xl mx-auto space-y-6">
-                <!-- Sustainability & Carbon -->
-                <button class="collapsible w-full text-left">
-                    <h3 class="text-xl font-bold">Sustainability & Carbon</h3>
-                </button>
-                <div class="content">
-                    <div class="card p-6">
-                        <h4 class="font-semibold text-gray-700 mb-4">Certifications & Tools</h4>
-                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                            <div class="flex items-center space-x-2">
-                                <i class="fas fa-certificate text-blue-600"></i>
-                                <span>ISO14001 EMS Auditing</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <i class="fas fa-leaf text-blue-600"></i>
-                                <span>GHG Accounting</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <i class="fas fa-shield-alt text-blue-600"></i>
-                                <span>NEBOSH</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <i class="fas fa-clipboard-check text-blue-600"></i>
-                                <span>EIA</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <i class="fas fa-map-marked-alt text-blue-600"></i>
-                                <span>GIS</span>
-                            </div>
-                        </div>
-                    </div>
+        <div class="section-header">
+            <h2>Skills</h2>
+            <button class="toggle-btn" data-section="skills">Toggle</button>
+        </div>
+        <div class="section-content" id="skills-content">
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Sustainability & Carbon</h3>
+                    <ul>
+                        <li>ISO14001 EMS Auditing</li>
+                        <li>GHG Accounting</li>
+                        <li>NEBOSH</li>
+                        <li>EIA</li>
+                        <li>GIS</li>
+                    </ul>
                 </div>
-
-                <!-- Analytics & Reporting -->
-                <button class="collapsible w-full text-left">
-                    <h3 class="text-xl font-bold">Analytics & Reporting</h3>
-                </button>
-                <div class="content">
-                    <div class="card p-6">
-                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                            <div class="flex items-center space-x-2">
-                                <i class="fas fa-database text-blue-600"></i>
-                                <span>SQL</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <i class="fas fa-chart-line text-blue-600"></i>
-                                <span>PowerBI</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <i class="fas fa-users-cog text-blue-600"></i>
-                                <span>CRM</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <i class="fas fa-file-excel text-blue-600"></i>
-                                <span>Excel</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <i class="fas fa-table text-blue-600"></i>
-                                <span>Google Sheets</span>
-                            </div>
-                        </div>
-                    </div>
+                <div class="skill-category">
+                    <h3>Analytics & Reporting</h3>
+                    <ul>
+                        <li>SQL</li>
+                        <li>PowerBI</li>
+                        <li>CRM</li>
+                        <li>Excel</li>
+                        <li>Google Sheets</li>
+                    </ul>
                 </div>
-
-                <!-- Digital Marketing -->
-                <button class="collapsible w-full text-left">
-                    <h3 class="text-xl font-bold">Digital Marketing</h3>
-                </button>
-                <div class="content">
-                    <div class="card p-6">
-                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                            <div class="flex items-center space-x-2">
-                                <i class="fab fa-google text-blue-600"></i>
-                                <span>Google Analytics</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <i class="fab fa-linkedin text-blue-600"></i>
-                                <span>LinkedIn Ads</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <i class="fas fa-search text-blue-600"></i>
-                                <span>SEO/SEM</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <i class="fas fa-bullhorn text-blue-600"></i>
-                                <span>Social Media</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <i class="fas fa-envelope-open-text text-blue-600"></i>
-                                <span>Email Marketing</span>
-                            </div>
-                        </div>
-                    </div>
+                <div class="skill-category">
+                    <h3>Digital Marketing</h3>
+                    <ul>
+                        <li>Google Analytics</li>
+                        <li>LinkedIn Ads</li>
+                        <li>SEO/SEM</li>
+                        <li>Social Media</li>
+                        <li>Email Marketing</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -227,240 +114,144 @@
 
     <!-- Experience Section -->
     <section id="experience" class="section">
-        <div class="container mx-auto px-4">
-            <div class="section-header">
-                <h2>Experience</h2>
-            </div>
-            <div class="max-w-4xl mx-auto space-y-6">
-                <button class="collapsible w-full text-left">
-                    <h3 class="text-xl font-bold">Experience</h3>
-                </button>
-                <div class="content">
-                    <div class="card p-6">
-                        <div class="space-y-6">
-                            <div class="flex flex-col md:flex-row gap-6">
-                                <div class="md:w-1/4">
-                                    <div class="grid grid-cols-2 gap-2">
-                                        <img src="assets/Clean tech/Windcredible.png" alt="Clean Tech 1" class="w-full h-auto rounded-lg shadow-md">
-                                        <img src="assets/Clean tech/Proclime.jpeg" alt="Clean Tech 2" class="w-full h-auto rounded-lg shadow-md">
-                                        <img src="assets/Clean tech/Gowth lab.png" alt="Clean Tech 3" class="w-full h-auto rounded-lg shadow-md">
-                                        <img src="assets/Companies/Unicef.png" alt="UNICEF" class="w-full h-auto rounded-lg shadow-md">
-                                    </div>
-                                </div>
-                                <div class="md:w-3/4">
-                                    <h4 class="font-semibold text-gray-800">Clean Tech Marketer</h4>
-                                    <p class="text-gray-600">Freelance, Porto (April 2025 - Present)</p>
-                                    <ul class="list-disc list-inside text-gray-600 space-y-2 mt-2">
-                                        <li>Executed full-funnel B2B demand generation campaigns for early-stage climate tech startups including Windcredibles, ProClime, and Beyond Sustainability, driving a 2× increase in SQLs and contributing in pipeline</li>
-                                        <li>Reduced CAC by 10% through SEO, Google Ads, and LinkedIn campaigns under Cleantech Growthlab, generating 20,000+ impressions and 300+ top-of-funnel conversions</li>
-                                        <li>Built ABM workflows and email nurture sequences in HubSpot, improving engagement and aligning GTM strategies across sustainability, energy, and mobility sectors</li>
-                                        <li>Conducted SEO audits and content updates that boosted site traffic by 40% and improved MQL conversion for clean energy</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="flex flex-col md:flex-row gap-6">
-                                <div class="md:w-1/4">
-                                    <img src="assets/Companies/Scores and Levels.png" alt="Scores and Levels" class="w-full h-auto rounded-lg shadow-md">
-                                </div>
-                                <div class="md:w-3/4">
-                                    <h4 class="font-semibold text-gray-800">Customer Success & Marketing Specialist</h4>
-                                    <p class="text-gray-600">Porto Marketing (June 2024 - April 2025)</p>
-                                    <ul class="list-disc list-inside text-gray-600 space-y-2 mt-2">
-                                        <li>Collaborated with the marketing team to develop data-driven promotional strategies using HubSpot, leading to a 25% increase in customer retention across all regions</li>
-                                        <li>Executed bulk messaging campaigns targeting 10,000+ clients, driving a 15% uplift in player engagement and a 10% increase in deposits</li>
-                                        <li>Oversaw player engagement and retention initiatives, contributing to a 20% overall growth in customer lifetime value across Asian, African, and Brazilian markets</li>
-                                        <li>Handled over 100 customer inquiries daily via chat for iGaming platforms like Bet365, Bet Barter, Aposta Real, and Sky247, ensuring timely resolution of betting issues and account management</li>
-                                        <li>Monitored and escalated complex bet disputes to RFBA, CRM, or OPS teams using 9 Wickets, achieving a 95% resolution rate within 24 hours</li>
-                                        <li>Assisted over 300 clients monthly with account registrations, deposits, and withdrawals, contributing to a seamless user experience across Asian, African, and Brazilian markets</li>
-                                        <li>Managed a portfolio of 150+ VIP customers, conducting telemarketing campaigns that resulted in a 20% increase in high-value customer engagement</li>
-                                        <li>Promoted new bonuses and offers, leading to the reactivation of 30% of dormant VIP accounts across targeted regions</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="flex flex-col md:flex-row gap-6">
-                                <div class="md:w-1/4">
-                                    <img src="assets/Companies/National Chromotogrpahy Inco.jpeg" alt="National Chromatography" class="w-full h-auto rounded-lg shadow-md">
-                                </div>
-                                <div class="md:w-3/4">
-                                    <h4 class="font-semibold text-gray-800">BUSINESS DEVELOPMENT MANAGER</h4>
-                                    <p class="text-gray-600">National Chromatography Inco, Europe (Oct 2022 - May 2024)</p>
-                                    <ul class="list-disc list-inside text-gray-600 space-y-2 mt-2">
-                                        <li>Acquired consistent new business with well-formulated and executed strategies based on market expertise</li>
-                                        <li>Collaborated with sales and business development teams to fulfill bids, RFP, and tender under strict timelines</li>
-                                        <li>Contributed to bottom line revenue by attaining 80% of sales quota</li>
-                                        <li>Revitalized marketing efforts employing streamlined processes and rebranding initiatives</li>
-                                        <li>Prospected and qualified marketing leads from the pharmaceutical industry using Salesforce CRM attaining conversion rates of 13%</li>
-                                        <li>Amplified international sales by selling pharmaceutical stocks worth $35k across North America and South Asia</li>
-                                        <li>Liaised with directors, R&D team, sales and procurement team, dispatch and management teams through weekly and monthly meetings</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="flex flex-col md:flex-row gap-6">
-                                <div class="md:w-1/4">
-                                    <img src="assets/Companies/Eurail.png" alt="Eurail" class="w-full h-auto rounded-lg shadow-md">
-                                </div>
-                                <div class="md:w-3/4">
-                                    <h4 class="font-semibold text-gray-800">CLIENT RELATIONSHIP SPECIALIST</h4>
-                                    <p class="text-gray-600">Eurail, Netherlands (Sept 2022 - Aug 2023)</p>
-                                    <ul class="list-disc list-inside text-gray-600 space-y-2 mt-2">
-                                        <li>Addressed customer inquiries through phone, email, and chat channels</li>
-                                        <li>Diagnosed and troubleshooted customer problems while delivering technical assistance</li>
-                                        <li>Monitored and escalated complex bet disputes to RFBA, CRM, or OPS teams using 9 Wickets</li>
-                                        <li>Assisted over 300 clients monthly with account registrations, deposits, and withdrawals</li>
-                                        <li>Managed a portfolio of 150+ VIP customers, conducting telemarketing campaigns that resulted in a 20% increase in high-value customer engagement</li>
-                                        <li>Promoted new bonuses and offers, leading to the reactivation of 30% of dormant VIP accounts across targeted regions</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="flex flex-col md:flex-row gap-6">
-                                <div class="md:w-1/4">
-                                    <img src="assets/Companies/Unicef.png" alt="UNICEF" class="w-full h-auto rounded-lg shadow-md">
-                                </div>
-                                <div class="md:w-3/4">
-                                    <h4 class="font-semibold text-gray-800">Project Assistant</h4>
-                                    <p class="text-gray-600">UNICEF</p>
-                                    <p class="text-gray-600 mb-2">2023 - Present</p>
-                                    <ul class="list-disc list-inside text-gray-600 space-y-2 mt-2">
-                                        <li>Developed Detailed Project Reports (DPRs) on sustainability, climate change, GHG management, and energy efficiency for BOSCH, PepsiCo, and multiple textile and tanning companies</li>
-                                        <li>Led water treatment initiatives for 15+ residential and corporate projects by analyzing BOD, DO, TSS, and other parameters</li>
-                                        <li>Designed coagulant/flocculant specifications and supported the installation of drinking water setups, acoustic blowers, and ETPs</li>
-                                        <li>Conducted waste management training during corporate/public events and utilized Agile/Kanban methods for sales tracking and stakeholder engagement</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+        <div class="section-header">
+            <h2>Experience</h2>
+            <button class="toggle-btn" data-section="experience">Toggle</button>
+        </div>
+        <div class="section-content" id="experience-content">
+            <div class="experience-item">
+                <div class="experience-header">
+                    <img src="assets/Clean tech/Windcredible.png" alt="Clean Tech" class="company-logo">
+                    <div>
+                        <h3>Clean Tech Marketer</h3>
+                        <p>Freelance, Porto (April 2025 - Present)</p>
                     </div>
                 </div>
+                <ul>
+                    <li>Executed full-funnel B2B demand generation campaigns for early-stage climate tech startups including Windcredibles, ProClime, and Beyond Sustainability, driving a 2× increase in SQLs and contributing in pipeline</li>
+                    <li>Reduced CAC by 10% through SEO, Google Ads, and LinkedIn campaigns under Cleantech Growthlab, generating 20,000+ impressions and 300+ top-of-funnel conversions</li>
+                    <li>Built ABM workflows and email nurture sequences in HubSpot, improving engagement and aligning GTM strategies across sustainability, energy, and mobility sectors</li>
+                    <li>Conducted SEO audits and content updates that boosted site traffic by 40% and improved MQL conversion for clean energy</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <img src="assets/Companies/Scores and Levels.png" alt="Scores and Levels" class="company-logo">
+                    <div>
+                        <h3>Customer Success & Marketing Specialist</h3>
+                        <p>Scores and Levels (June 2024 - April 2025)</p>
+                    </div>
+                </div>
+                <ul>
+                    <li>Collaborated with the marketing team to develop data-driven promotional strategies using HubSpot, leading to a 25% increase in customer retention across all regions</li>
+                    <li>Executed bulk messaging campaigns targeting 10,000+ clients, driving a 15% uplift in player engagement and a 10% increase in deposits</li>
+                    <li>Oversaw player engagement and retention initiatives, contributing to a 20% overall growth in customer lifetime value across Asian, African, and Brazilian markets</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <img src="assets/Companies/National Chromotogrpahy Inco.jpeg" alt="National Chromatography" class="company-logo">
+                    <div>
+                        <h3>Business Development Manager</h3>
+                        <p>National Chromatography Inco, Europe (Oct 2022 - May 2024)</p>
+                    </div>
+                </div>
+                <ul>
+                    <li>Acquired consistent new business with well-formulated and executed strategies based on market expertise</li>
+                    <li>Collaborated with sales and business development teams to fulfill bids, RFP, and tender under strict timelines</li>
+                    <li>Contributed to bottom line revenue by attaining 80% of sales quota</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <img src="assets/Companies/Eurail.png" alt="Eurail" class="company-logo">
+                    <div>
+                        <h3>Client Relationship Specialist</h3>
+                        <p>Eurail, Netherlands (Sept 2022 - Aug 2023)</p>
+                    </div>
+                </div>
+                <ul>
+                    <li>Addressed customer inquiries through phone, email, and chat channels</li>
+                    <li>Diagnosed and troubleshooted customer problems while delivering technical assistance</li>
+                    <li>Managed a portfolio of 150+ VIP customers, conducting telemarketing campaigns that resulted in a 20% increase in high-value customer engagement</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <img src="assets/Companies/Unicef.png" alt="UNICEF" class="company-logo">
+                    <div>
+                        <h3>Project Assistant</h3>
+                        <p>UNICEF (2019 - 2020)</p>
+                    </div>
+                </div>
+                <ul>
+                    <li>Developed Detailed Project Reports (DPRs) on sustainability, climate change, GHG management, and energy efficiency for BOSCH, PepsiCo, and multiple textile and tanning companies</li>
+                    <li>Led water treatment initiatives for 15+ residential and corporate projects by analyzing BOD, DO, TSS, and other parameters</li>
+                    <li>Designed coagulant/flocculant specifications and supported the installation of drinking water setups, acoustic blowers, and ETPs</li>
+                </ul>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="section">
-        <div class="container mx-auto px-4">
-            <div class="section-header">
-                <h2>Projects</h2>
-            </div>
-            <div class="max-w-4xl mx-auto space-y-6">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex flex-col md:flex-row gap-6">
-                        <div class="md:w-1/2">
-                            <img src="assets/Projects/Climate eventss.jpg" alt="Climate Events 2025 Platform" class="w-full h-auto rounded-lg shadow-md">
-                        </div>
-                        <div class="md:w-1/2">
-                            <h3 class="text-xl font-semibold text-gray-800">Climate-Events-2025</h3>
-                            <p class="text-gray-600">Data Visualization Platform</p>
-                            <p class="text-gray-700 mt-2">Built a data-driven platform to visualize major climate events from 2025—using GIS and interactive dashboards to map trends, impacts, and regional vulnerabilities. Focused on turning raw data into clear, actionable insights for climate awareness.</p>
-                            <div class="mt-4">
-                                <a href="https://github.com/Ash-Impactco/Climate-Events-2025" target="_blank" class="text-blue-600 hover:text-blue-800">
-                                    <i class="fab fa-github"></i> View Project
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+        <div class="section-header">
+            <h2>Projects</h2>
+            <button class="toggle-btn" data-section="projects">Toggle</button>
+        </div>
+        <div class="section-content" id="projects-content">
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="assets/Projects/Climate eventss.jpg" alt="Climate Events 2025">
+                    <h3>Climate-Events-2025</h3>
+                    <p>Data Visualization Platform</p>
+                    <p>Built a data-driven platform to visualize major climate events from 2025—using GIS and interactive dashboards to map trends, impacts, and regional vulnerabilities.</p>
+                    <a href="#" class="project-link">View Project</a>
                 </div>
 
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex flex-col md:flex-row gap-6">
-                        <div class="md:w-1/2">
-                            <img src="assets/Projects/Mangroves.jpeg" alt="ERW Mangroves Project" class="w-full h-auto rounded-lg shadow-md">
-                        </div>
-                        <div class="md:w-1/2">
-                            <h3 class="text-xl font-semibold text-gray-800">ERW Mangroves</h3>
-                            <p class="text-gray-600">Environmental Research Project</p>
-                            <p class="text-gray-700 mt-2">Conducted research on Enhanced Rock Weathering (ERW) in mangrove ecosystems. Analyzed carbon sequestration potential and ecosystem services of these critical coastal habitats.</p>
-                            <div class="mt-4">
-                                <a href="https://github.com/Ash-Impactco/ERW---Mangroves" target="_blank" class="text-blue-600 hover:text-blue-800">
-                                    <i class="fab fa-github"></i> View Project
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="project-card">
+                    <img src="assets/Projects/Mangroves.jpeg" alt="ERW Mangroves">
+                    <h3>ERW Mangroves</h3>
+                    <p>Environmental Research Project</p>
+                    <p>Conducted research on Enhanced Rock Weathering (ERW) in mangrove ecosystems. Analyzed carbon sequestration potential and ecosystem services.</p>
+                    <a href="#" class="project-link">View Project</a>
                 </div>
 
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex flex-col md:flex-row gap-6">
-                        <div class="md:w-1/2">
-                            <img src="assets/Projects/Salt Marshes.jpeg" alt="ERW Salt Marshes Project" loading="lazy" class="w-full h-auto rounded-lg shadow-md">
-                        </div>
-                        <div class="md:w-1/2">
-                            <h3 class="text-xl font-semibold text-gray-800">ERW Salt Marshes</h3>
-                            <p class="text-gray-600">Environmental Research Project</p>
-                            <p class="text-gray-700 mt-2">Conducted research on Enhanced Rock Weathering (ERW) in salt marsh ecosystems. Analyzed carbon sequestration potential and ecosystem services of these critical coastal habitats.</p>
-                            <div class="mt-4">
-                                <a href="https://github.com/Ash-Impactco/Erw--Salt-Marshes" target="_blank" class="text-blue-600 hover:text-blue-800">
-                                    <i class="fab fa-github"></i> View Project
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="project-card">
+                    <img src="assets/Projects/Coral Bleaching.jpeg" alt="Coral Bleaching">
+                    <h3>Coral Bleaching Status</h3>
+                    <p>Andaman Islands, India (Dec 2017 - Feb 2018)</p>
+                    <ul>
+                        <li>Conducted comprehensive SST analysis revealing 1°C temperature threshold</li>
+                        <li>Developed Coral Bleaching Alert System (CBAS)</li>
+                        <li>Studied Acropora coral species degradation rate</li>
+                    </ul>
                 </div>
 
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex flex-col md:flex-row gap-6">
-                        <div class="md:w-1/2">
-                            <img src="assets/Projects/Geothermal.jpeg" alt="Geothermal Heat Grid Project" class="w-full h-auto rounded-lg shadow-md">
-                        </div>
-                        <div class="md:w-1/2">
-                            <h3 class="text-xl font-semibold text-gray-800">Upcoming Geothermal Heat Grid</h3>
-                            <p class="text-gray-600">Leeuwarden, Netherlands (Feb 2022 - Apr 2022)</p>
-                            <ul class="list-disc list-inside text-gray-600 space-y-3 mt-2">
-                                <li>Conducted comprehensive social impact assessment through interviews with 100 respondents</li>
-                                <li>Explored public concerns regarding integration of geothermal energy into existing heat grid</li>
-                                <li>Implemented DESSIN-ESS conceptual framework for qualitative data processing</li>
-                            </ul>
-                            <div class="mt-4">
-                                <a href="https://www.omropfryslan.nl/nl/nieuws/1144457/internationale-studenten-duurzame-aanpak-in-fryslan-is-mogelijk" target="_blank" class="text-blue-600 hover:text-blue-800">
-                                    <i class="fas fa-external-link-alt"></i> View Publication
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="project-card">
+                    <img src="assets/Projects/Geothermal.jpeg" alt="Geothermal">
+                    <h3>Upcoming Geothermal Heat Grid</h3>
+                    <p>Leeuwarden, Netherlands (Feb 2022 - Apr 2022)</p>
+                    <ul>
+                        <li>Conducted comprehensive social impact assessment</li>
+                        <li>Explored public concerns regarding geothermal energy</li>
+                        <li>Implemented DESSIN-ESS conceptual framework</li>
+                    </ul>
+                    <a href="#" class="project-link">View Publication</a>
                 </div>
 
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex flex-col md:flex-row gap-6">
-                        <div class="md:w-1/2">
-                            <img src="assets/Projects/Coral Bleaching.jpeg" alt="Coral Bleaching Status Project" class="w-full h-auto rounded-lg shadow-md">
-                        </div>
-                        <div class="md:w-1/2">
-                            <h3 class="text-xl font-semibold text-gray-800">Coral Bleaching Status</h3>
-                            <p class="text-gray-600">Andaman Islands, India (Dec 2017 - Feb 2018)</p>
-                            <ul class="list-disc list-inside text-gray-600 space-y-3 mt-2">
-                                <li>Conducted comprehensive SST analysis revealing 1°C temperature threshold above maximum monthly temperature</li>
-                                <li>Identified degradation of zooxanthellae-algae symbiosis due to thermal stress</li>
-                                <li>Developed Coral Bleaching Alert System (CBAS) using satellite-derived SST data</li>
-                                <li>Studied Acropora coral species degradation rate and SST correlation</li>
-                                <li>Presented findings to multiple stakeholders:
-                                    <ul class="ml-6 mt-2">
-                                        <li>ANET (Andaman Nicobar Environment Team)</li>
-                                        <li>Indian Wildlife Department</li>
-                                        <li>Indian Coast Guard of Andaman</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex flex-col md:flex-row gap-6">
-                        <div class="md:w-1/2">
-                            <img src="assets/Projects/smoob_logo.jpeg" alt="EV-Charging App Pilot" class="w-full h-auto rounded-lg shadow-md">
-                        </div>
-                        <div class="md:w-1/2">
-                            <h3 class="text-xl font-semibold text-gray-800">AutomanomousMobility Commerce </h3>
-                            <p class="text-gray-600">SMOOV, Netherlands (Apr 2022 - Jul 2022)</p>
-                            <ul class="list-disc list-inside text-gray-600 space-y-3 mt-2">
-                                <li>Specialized in creating fast & reliable charging location apps for EV drivers through traffic analysis, road quality estimation, urban planning, and seamless troubleshooting.</li>
-                                <li>Contributed to reversing Nitrogen Crisis with AMC and migration to cities.</li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="project-card">
+                    <img src="assets/Projects/smoob_logo.jpeg" alt="EV-Charging App">
+                    <h3>AutomanomousMobility Commerce</h3>
+                    <p>SMOOV, Netherlands (Apr 2022 - Jul 2022)</p>
+                    <ul>
+                        <li>Created fast & reliable charging location apps for EV drivers</li>
+                        <li>Contributed to reversing Nitrogen Crisis with AMC</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -468,74 +259,27 @@
 
     <!-- Certifications Section -->
     <section id="certifications" class="section">
-        <div class="container mx-auto px-4">
-            <div class="section-header">
-                <h2>Certifications</h2>
-            </div>
-            <div class="max-w-4xl mx-auto space-y-4">
-                <button class="collapsible w-full text-left">
-                    <h3 class="text-xl font-bold">Professional Certifications</h3>
-                </button>
-                <div class="content">
-                    <div class="card p-6">
-                        <div class="space-y-4">
-                            <div class="flex items-start space-x-4">
-                                <i class="fas fa-certificate text-blue-600 mt-1"></i>
-                                <div>
-                                    <h4 class="font-semibold text-gray-800">PROJECT MANAGEMENT BY GOOGLE</h4>
-                                    <p class="text-gray-600">Google</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start space-x-4">
-                                <i class="fas fa-certificate text-blue-600 mt-1"></i>
-                                <div>
-                                    <h4 class="font-semibold text-gray-800">NEGOTIATION</h4>
-                                    <p class="text-gray-600">University of Yale</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start space-x-4">
-                                <i class="fas fa-certificate text-blue-600 mt-1"></i>
-                                <div>
-                                    <h4 class="font-semibold text-gray-800">GENERATIVE AI FOR DIGITAL MARKETERS</h4>
-                                    <p class="text-gray-600">LinkedIn</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start space-x-4">
-                                <i class="fas fa-certificate text-blue-600 mt-1"></i>
-                                <div>
-                                    <h4 class="font-semibold text-gray-800">NEBOSH INTERNATIONAL GENERAL CERTIFICATE IN OCCUPATIONAL HEALTH AND SAFETY</h4>
-                                    <p class="text-gray-600">NEBOSH</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start space-x-4">
-                                <i class="fas fa-certificate text-blue-600 mt-1"></i>
-                                <div>
-                                    <h4 class="font-semibold text-gray-800">ISO 14001:2015 LEAD AUDITOR FOR ENVIRONMENTAL MANAGEMENT SYSTEM</h4>
-                                    <p class="text-gray-600">IRCA</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start space-x-4">
-                                <i class="fas fa-certificate text-blue-600 mt-1"></i>
-                                <div>
-                                    <h4 class="font-semibold text-gray-800">HubSpot Inbound Marketing</h4>
-                                    <p class="text-gray-600">HubSpot Academy</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start space-x-4">
-                                <i class="fas fa-certificate text-blue-600 mt-1"></i>
-                                <div>
-                                    <h4 class="font-semibold text-gray-800">Google Analytics Certification</h4>
-                                    <p class="text-gray-600">Google</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="section-header">
+            <h2>Certifications</h2>
+            <button class="toggle-btn" data-section="certifications">Toggle</button>
+        </div>
+        <div class="section-content" id="certifications-content">
+            <div class="certifications-grid">
+                <div class="certification-card">
+                    <h3>ISO 14001 EMS Auditing</h3>
+                    <p>Environmental Management Systems</p>
+                </div>
+                <div class="certification-card">
+                    <h3>NEBOSH IGC</h3>
+                    <p>International General Certificate</p>
+                </div>
+                <div class="certification-card">
+                    <h3>GHG Accounting</h3>
+                    <p>Carbon Footprint Assessment</p>
+                </div>
+                <div class="certification-card">
+                    <h3>EIA Certification</h3>
+                    <p>Environmental Impact Assessment</p>
                 </div>
             </div>
         </div>
@@ -543,66 +287,34 @@
 
     <!-- Ventures Section -->
     <section id="ventures" class="section">
-        <div class="container mx-auto px-4">
-            <div class="section-header">
-                <h2>Ventures</h2>
-                <p class="section-subtitle text-gray-600">Sustainable initiatives making a difference</p>
-            </div>
-            <div class="max-w-4xl mx-auto space-y-6">
-                <button class="collapsible w-full text-left">
-                    <h3 class="text-xl font-bold">Ventures</h3>
-                </button>
-                <div class="content">
-                    <div class="card p-6">
-                        <div class="space-y-6">
-                            <div class="flex flex-col md:flex-row gap-6">
-                                <div class="md:w-1/4">
-                                    <img src="assets/Ventures/Anna ka Dukhaan.png" alt="Anna ka Dukhaan" class="w-full h-auto rounded-lg shadow-md">
-                                </div>
-                                <div class="md:w-3/4">
-                                    <h4 class="font-semibold text-gray-800">ANNA KA DUKHAAN</h4>
-                                    <p class="text-gray-600">2021 - Present</p>
-                                    <p class="text-gray-600 mb-2">Delhi & Siliguri, India</p>
-                                    <ul class="list-disc list-inside text-gray-600 space-y-2 mt-2">
-                                        <li>Launched a food service specializing in authentic South Indian cuisine</li>
-                                        <li>Developed menu and recipes, managed kitchen operations</li>
-                                        <li>Implemented sustainable packaging and delivery practices</li>
-                                    </ul>
-                                </div>
-                            </div>
+        <div class="section-header">
+            <h2>Ventures</h2>
+            <button class="toggle-btn" data-section="ventures">Toggle</button>
+        </div>
+        <div class="section-content" id="ventures-content">
+            <div class="ventures-grid">
+                <div class="venture-card">
+                    <img src="assets/Ventures/Intrusivethoughtsftw.jpeg" alt="Intrusive Thoughts FTW">
+                    <h3>Intrusive Thoughts FTW</h3>
+                    <p>Creative Content Platform</p>
+                    <p>A platform for sharing and exploring creative thoughts and ideas.</p>
+                    <a href="#" class="venture-link">Visit Linktree</a>
+                </div>
 
-                            <div class="flex flex-col md:flex-row gap-6">
-                                <div class="md:w-1/4">
-                                    <img src="assets/Ventures/Burrito Delhi.png" alt="Burrito Delhi" class="w-full h-auto rounded-lg shadow-md">
-                                </div>
-                                <div class="md:w-3/4">
-                                    <h4 class="font-semibold text-gray-800">BURRITO DELHI</h4>
-                                    <p class="text-gray-600">2022 - 2023</p>
-                                    <p class="text-gray-600 mb-2">Amsterdam, Netherlands</p>
-                                    <ul class="list-disc list-inside text-gray-600 space-y-2 mt-2">
-                                        <li>Founded and operated a Mexican food delivery service in Delhi</li>
-                                        <li>Managed operations, marketing, and customer service</li>
-                                        <li>Built a loyal customer base through quality food and service</li>
-                                    </ul>
-                                </div>
-                            </div>
+                <div class="venture-card">
+                    <img src="assets/Ventures/Burrito Delhi.png" alt="Burrito Delhi">
+                    <h3>Burrito Delhi</h3>
+                    <p>Food & Lifestyle Brand</p>
+                    <p>Exploring Delhi's food scene and lifestyle through a unique perspective.</p>
+                    <a href="#" class="venture-link">Follow on Instagram</a>
+                </div>
 
-                            <div class="flex flex-col md:flex-row gap-6">
-                                <div class="md:w-1/4">
-                                    <img src="assets/Ventures/Intrusivethoughtsftw.jpeg" alt="Intrusive Thoughts FTW" class="w-full h-auto rounded-lg shadow-md">
-                                </div>
-                                <div class="md:w-3/4">
-                                    <h4 class="font-semibold text-gray-800">INTRUSIVE THOUGHTS FTW</h4>
-                                    <p class="text-gray-600">2022 - Present</p>
-                                    <ul class="list-disc list-inside text-gray-600 space-y-2 mt-2">
-                                        <li>Created Intrusive Thoughts FTW, a platform to spread awareness about sustainable living and eco-friendly practices</li>
-                                        <li>Share engaging content about climate change, renewable energy, and practical ways to live sustainably</li>
-                                        <li>Organize workshops and campaigns to educate communities about environmental issues</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="venture-card">
+                    <img src="assets/Ventures/Anna ka Dukhaan.png" alt="Anna ka Dukhaan">
+                    <h3>Anna ka Dukhaan</h3>
+                    <p>Food & Culture Platform</p>
+                    <p>Celebrating food, culture, and stories from Delhi's streets.</p>
+                    <a href="#" class="venture-link">Follow on Instagram</a>
                 </div>
             </div>
         </div>
@@ -610,15 +322,33 @@
 
     <!-- Contact Section -->
     <section id="contact" class="section">
-        <div class="container">
-            <h2>Get in Touch</h2>
-            <div class="contact-content">
+        <div class="section-header">
+            <h2>Contact</h2>
+            <button class="toggle-btn" data-section="contact">Toggle</button>
+        </div>
+        <div class="section-content" id="contact-content">
+            <div class="contact-container">
+                <img src="assets/Profile/Profile Pic.jpg" alt="Profile Picture" class="contact-profile">
+                <h3>Get in Touch</h3>
                 <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
-                <div class="contact-info">
-                    <a href="mailto:aswin.impactco@gmail.com">aswin.impactco@gmail.com</a>
-                    <a href="https://linkedin.com/in/aswin-sivaprakash" target="_blank">LinkedIn Profile</a>
-                    <a href="https://github.com/Ash-Impactco" target="_blank">GitHub Profile</a>
+                <div class="contact-links">
+                    <a href="mailto:aswin.impactco@gmail.com" class="contact-link">
+                        <i class="fas fa-envelope"></i>
+                        aswin.impactco@gmail.com
+                    </a>
+                    <a href="https://linkedin.com/in/aswin-sivaprakash" class="contact-link" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                        LinkedIn Profile
+                    </a>
+                    <a href="https://github.com/Ash-Impactco" class="contact-link" target="_blank">
+                        <i class="fab fa-github"></i>
+                        GitHub Profile
+                    </a>
                 </div>
+                <a href="#" class="download-resume">
+                    <i class="fas fa-download"></i>
+                    Download Resume
+                </a>
             </div>
         </div>
     </section>
