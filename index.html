@@ -108,7 +108,67 @@ targetElement.scrollIntoView({ behavior: 'smooth' });
 </div>
 </div>
 </nav>
+<!-- Google Fonts: Montserrat -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
+<style>
+  body, .section, .card, .collapsible, .content, nav, .nav-link {
+    font-family: 'Montserrat', sans-serif !important;
+  }
+</style>
+
+<!-- Responsive Navigation Bar (Sticky) -->
+<nav class="bg-white shadow-md fixed w-full z-50">
+  <div class="container mx-auto px-4 flex justify-between items-center h-16">
+    <!-- Logo / Brand -->
+    <a href="#about" class="font-bold text-xl text-green-700">MyPortfolio</a>
+    <!-- Hamburger menu (mobile) -->
+    <button id="nav-toggle" class="block md:hidden focus:outline-none" aria-label="Toggle navigation">
+      <svg class="w-7 h-7 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+    <!-- Desktop Navigation links -->
+    <div id="nav-menu" class="hidden md:flex space-x-6">
+      <a href="#about" class="nav-link text-gray-700 hover:text-green-700 font-semibold">About</a>
+      <a href="#mobile" class="nav-link text-gray-700 hover:text-green-700 font-semibold">Mobile</a>
+      <a href="#education" class="nav-link text-gray-700 hover:text-green-700 font-semibold">Education</a>
+      <a href="#skills" class="nav-link text-gray-700 hover:text-green-700 font-semibold">Skills</a>
+      <a href="#experience" class="nav-link text-gray-700 hover:text-green-700 font-semibold">Experience</a>
+      <a href="#projects" class="nav-link text-gray-700 hover:text-green-700 font-semibold">Projects</a>
+      <a href="#free-toggle" class="nav-link text-gray-700 hover:text-green-700 font-semibold">More</a>
+    </div>
+  </div>
+  <!-- Mobile dropdown menu (shows when hamburger is clicked) -->
+  <div id="nav-menu-mobile" class="md:hidden hidden bg-white px-4 pb-4 shadow">
+    <a href="#about" class="block py-2 nav-link text-gray-700 hover:text-green-700 font-semibold">About</a>
+    <a href="#mobile" class="block py-2 nav-link text-gray-700 hover:text-green-700 font-semibold">Mobile</a>
+    <a href="#education" class="block py-2 nav-link text-gray-700 hover:text-green-700 font-semibold">Education</a>
+    <a href="#skills" class="block py-2 nav-link text-gray-700 hover:text-green-700 font-semibold">Skills</a>
+    <a href="#experience" class="block py-2 nav-link text-gray-700 hover:text-green-700 font-semibold">Experience</a>
+    <a href="#projects" class="block py-2 nav-link text-gray-700 hover:text-green-700 font-semibold">Projects</a>
+    <a href="#free-toggle" class="block py-2 nav-link text-gray-700 hover:text-green-700 font-semibold">More</a>
+  </div>
+</nav>
+
+<!-- Spacer to prevent content hidden behind fixed nav -->
+<div class="h-16"></div>
+
+<script>
+  // Toggle the mobile menu
+  document.getElementById('nav-toggle').addEventListener('click', function () {
+    const mobileMenu = document.getElementById('nav-menu-mobile');
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  // Close mobile menu when a link is clicked
+  document.querySelectorAll('#nav-menu-mobile a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      document.getElementById('nav-menu-mobile').classList.add('hidden');
+    });
+  });
+</script>
 <main id="home">
 
 <!-- Hero Section -->
